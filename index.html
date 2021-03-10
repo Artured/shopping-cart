@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <script src="https://code.jquery.com/jquery-3.6.0.slim.min.js" integrity="sha256-u7e5khyithlIdTpu22PHhENmPcRdFiHRjhAuHcs05RI=" crossorigin="anonymous"></script>
+    <script src="cart.js"></script>
+    <title>Document</title>
+</head>
+<body>
+    <div class="container">
+        <div class="container-item-box">
+            <div class="container-item">
+                <div class="container-item-img">
+                    <span style='font-size:140px;'>&#127856;</span>
+                </div>
+                <p>Carrot Cake $15</p>
+                <div class="moreLess-buttons"> 
+                    <button id="less" onclick="lessButton(1)" class="sing">-</button>
+                    <input type="text" value="0"  id="quantity_item_1" data-price="15" data-name="Carrot Cake">
+                    <button onclick="moreButton(1)" class="sing">+</button>
+                </div>
+                <button class="succes general-button" onclick="add(1)">agregar</button>
+            </div>
+            <div class="container-item">
+                <div class="container-item-img">
+                    <span style='font-size:140px;'>&#127874;</span>
+                    <!-- <img src="img/ch_2.jpg" alt=""> -->
+                </div>
+                <p>Birthday Cake $15</p>
+                <div class="moreLess-buttons"> 
+                    <button id="less" onclick="lessButton(2)" class="sing">-</button>
+                    <input type="text" value="0"  id="quantity_item_2" data-price="15" data-name="Birthday Cake">
+                    <button onclick="moreButton(2)" class="sing">+</button>
+                </div>
+                <button class="succes general-button" onclick="add(2)">agregar</button>
+            </div>
+            <div class="container-item">
+                <div class="container-item-img">
+                    <span style='font-size:150px;'>&#129473;</span>
+                </div>
+                <p>Cupckae $15</p>
+                <div class="moreLess-buttons"> 
+                    <button id="less" onclick="lessButton(3)" class="sing">-</button>
+                    <input type="text" value="0"  id="quantity_item_3" data-price="15" data-name="Cupckae">
+                    <button  onclick="moreButton(3)" class="sing">+</button>
+                </div>
+                <button class="succes general-button" onclick="add(3)">agregar</button>
+            </div>
+            <div class="container-item">
+                <div class="container-item-img">
+                    <span style='font-size:140px;'>&#129383;</span>
+                </div>
+                <p>Apple Pie $15</p>
+                <div class="moreLess-buttons"> 
+                    <button id="less" onclick="lessButton(4)" class="sing">-</button>
+                    <input type="text" value="0"  id="quantity_item_4" data-price="15" data-name="Apple Pie">
+                    <button onclick="moreButton(4)" class="sing">+</button>
+                </div>
+                <button class="succes general-button" onclick="add(4)">agregar</button>
+            </div>
+        </div>
+        <div class="container-basket">
+            <h1>Hi, there coustumer!</h1>
+            <div class="basket-products-list" id="basket">
+                <div class="products-list" id="products_list"></div>
+                <div class="products-list-amount" id="products_list_amount"></div>
+            </div>
+
+            <div class="basket-amount">
+                <button class="submit general-button" onclick="pay()">Pay</button>
+                <label class="total-amount">Total $ </label>
+                <input class="submit-field"  value="0" type="text" id="total" readonly>
+            </div>
+        </div>
+    </div>
+</body>
+
+<div class="modal fade" tabindex="-1" role="dialog" id="modal">
+    <div class="modal-dialog" >
+        <div class="modal-content">
+            <div class="modal-header">
+                <i class="icon-close">&#10060</i>
+            </div>
+            <div class="modal-body">
+                <p>
+                    Compra Realizada
+                </p>
+            </div>
+            <div class="modal-footer">
+                <h1>Gracias por su compra!</h1>
+            </div>
+        </div>
+    </div>
+</div>
+
+</html>
