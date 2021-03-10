@@ -37,8 +37,11 @@ var add = function(field){
 }
 
 var pay = function(){
-    jQuery('#modal').removeClass('fade');
-    setTimeout( () =>  clean(), 1000);
+    let total = document.getElementById('total').value;
+    if(parseInt(total) != 0){
+        jQuery('#modal').removeClass('fade');
+        setTimeout( () =>  clean(), 2000);
+    }
 }
 
 var clean = function(){
